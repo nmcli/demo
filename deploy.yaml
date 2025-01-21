@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: demo
+  name: httpd-deploy
+  annotations: {}
+spec:
+  selector:
+    matchLabels:
+      app: httpd-deploy
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: httpd-deploy
+    spec:
+      volumes:
+      - name: httpd-volume
+        persistentVolumeClaim:
+          claimName: httpd-pvc
+      containers:
+        - name: container
+          image: 'registry.redhat.io/ubi8/httpd-24:1-347'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+          - name: httpd-volume
+            mountPath: /var/www/html/
+          env: []
+      imagePullSecrets: []
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  paused: false

@@ -20,7 +20,7 @@ spec:
           claimName: httpd-pvc
       containers:
         - name: container
-          image: 'image-registry.openshift-image-registry.svc:5000/registry/httpd-24:latest'
+          image: 'registry.redhat.io/rhel8/httpd-24:latest'
           ports:
             - containerPort: 8080
               protocol: TCP

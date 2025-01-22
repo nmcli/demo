@@ -1,5 +1,5 @@
 # Use RHEL 8 base image
-FROM default-route-openshift-image-registry.apps.ext2.mtp.local/registry/httpd-24:$(results.image-tag.path)
+FROM default-route-openshift-image-registry.apps.ext2.mtp.local/registry/httpd-24:latest
 
 # Set environment variables
 ENV HTTPD_VERSION 2.4.57

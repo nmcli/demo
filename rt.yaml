@@ -2,7 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: httpd-route
-  namespace: demo
+  namespace: demo-deploy
   labels:
     type: sharded
 spec:

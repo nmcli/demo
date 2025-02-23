@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: httpd-pvc
-  namespace: demo
+  namespace: demo-deploy
 spec:
   accessModes:
     - ReadWriteMany

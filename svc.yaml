@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   name: httpd-service
-  namespace: demo
+  namespace: demo-deploy
 spec:
   ports:
   - port: 8080

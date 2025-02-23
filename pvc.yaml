@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: httpd-pvc
+  name: httpd-deploy-pvc
   namespace: demo-deploy
 spec:
   accessModes:

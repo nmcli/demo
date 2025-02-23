@@ -1,16 +1,16 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: httpd-route
+  name: httpd-deploy-route
   namespace: demo-deploy
   labels:
     type: sharded
 spec:
   to:
     kind: Service
-    name: httpd-service
+    name: httpd-deploy-service
   tls: null
-  host: cys.apache.com
+  host: cys-deploy.apache.com
   path: /
   port:
     targetPort: 8080

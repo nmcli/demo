@@ -15,7 +15,7 @@ spec:
         app: httpd-deploy
     spec:
       volumes:
-      - name: httpd-volume
+      - name: httpd-deploy-volume
         persistentVolumeClaim:
           claimName: httpd-pvc
       containers:
@@ -25,7 +25,7 @@ spec:
             - containerPort: 8080
               protocol: TCP
           volumeMounts:
-          - name: httpd-volume
+          - name: httpd-deploy-volume
             mountPath: /var/www/html/
           env: []
       imagePullSecrets: []

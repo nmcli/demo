@@ -9,5 +9,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    path: /nfs-dir/httpd-pv/
+    path: /nfs-dir/httpd-deploy-pv/
     server: 192.168.120.2

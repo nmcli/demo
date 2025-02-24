@@ -17,7 +17,7 @@ spec:
       volumes:
       - name: httpd-deploy-volume
         persistentVolumeClaim:
-          claimName: httpd-pvc
+          claimName: httpd-deploy-pvc
       containers:
         - name: container
           image: 'registry.redhat.io/rhel8/httpd-24:latest'
